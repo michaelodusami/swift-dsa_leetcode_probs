@@ -12,9 +12,9 @@ class Solution {
         var ptr: Int = m + n - 1
 
         // Merge from the end of both arrays
-        while ptrOne >= 0 && ptrTwo >= 0 {
-            print("Enter: \(nums1) with pointer at \(ptr) and ptr1 at \(ptrOne)")
-            if nums1[ptrOne] > nums2[ptrTwo] {
+        while ptrTwo >= 0 {
+           
+            if ptrOne >= 0 && nums1[ptrOne] > nums2[ptrTwo] {
                 nums1[ptr] = nums1[ptrOne]
                 ptrOne -= 1
             } else {
@@ -22,7 +22,7 @@ class Solution {
                 ptrTwo -= 1
             }
             ptr -= 1
-            print("Exit: \(nums1) with pointer at \(ptr) and ptr1 at \(ptrOne)")
+          
         }
 
         print(nums1)
